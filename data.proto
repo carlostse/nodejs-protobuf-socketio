@@ -1,0 +1,28 @@
+package demo;
+
+message Room {
+  required string channel = 1;
+  required uint32 count = 2;
+}
+
+message Message {
+  enum Command {
+    None = 0;
+    Connect = 1;
+    Connected = 2;
+    Join = 3;
+    Joined = 4;
+    Leave = 5;
+    Talk = 6;
+    Talking = 7;
+    Talked = 8;
+    Voice = 9;
+  }
+
+  required Command cmd = 1 [default = None];
+  optional string channel = 2;
+  optional uint32 errno = 3;
+  optional uint32 count = 4;
+  optional bytes data = 5;
+  repeated Room room = 6;
+}
