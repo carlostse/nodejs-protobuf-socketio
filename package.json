@@ -1,0 +1,14 @@
+{
+  "name": "walkie-talkie-server",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "express": "4.*.*",
+    "socket.io": "1.*.*",
+    "node-protobuf": "1.2.*",
+    "moment": "latest"
+  }
+}
